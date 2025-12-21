@@ -1,379 +1,390 @@
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FinanceProduct",
-      "name": "누구나운전보험 비교 및 추천 서비스",
-      "description": "2026년 최신 누구나운전보험 상품을 비교하고 추천합니다. 1일 단기운전자보험, 임시운전자특약 가입 조건, 보장 내용, 보험료를 쉽고 빠르게 확인하세요.",
-      "url": "https://도메인/누구나운전보험",
-      "provider": {
-        "@type": "Organization",
-        "name": "보험 비교 센터",
-        "telephone": "1670-XXXX"
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "누구나 운전 보험이란 무엇인가요?",
+        "answer": {
+          "@type": "Answer",
+          "text": "누구나 운전 보험은 지정된 운전자 외에 다른 사람이 차량을 운전하더라도 사고 시 보상을 받을 수 있도록 운전자 범위를 '누구나'로 확대한 보험 상품입니다."
+        }
       },
-      "areaServed": "대한민국 전 지역",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "KRW",
-        "description": "운전자보험료 무료 비교 견적 제공"
+      {
+        "@type": "Question",
+        "name": "원데이 보험과 임시운전자특약의 차이는 무엇인가요?",
+        "answer": {
+          "@type": "Answer",
+          "text": "원데이 보험은 가입 즉시 효력이 발생하는 경우가 많으며, 임시운전자특약은 가입일 기준 다음 날 0시부터 효력이 발생하므로 최소 하루 전에 가입해야 합니다."
+        }
       }
+    ]
+  }
+  </script>
+
+  <style>
+    /* 다채롭고 부드러운 색감의 현대적 디자인 */
+    :root {
+      --primary-color: #4a90e2;
+      --secondary-color: #f0f7ff;
+      --accent-color: #5cb85c;
+      --text-main: #2c3e50;
+      --text-sub: #546e7a;
+      --bg-light: #fdfdfd;
+      --border-color: #e1e8ed;
     }
-    </script>
-    
-    <style>
-        /* Google 폰트 - Noto Sans KR */
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
-    
-        /* 기본 스타일 */
-        body { font-family: 'Noto Sans KR', sans-serif; line-height: 1.7; margin: 0; padding: 0; background: #e8f5e9; color: #263238; }
-        header, section, footer { max-width: 1000px; margin: 30px auto; padding: 25px 20px; background: #ffffff; border-radius: 15px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); }
-        h1, h2, h3 { color: #004d40; font-weight: 700; line-height: 1.4; }
-        h1 { font-size: 2.5em; text-align: center; margin-bottom: 0.5em; color: #00695c; }
-        h2 { font-size: 1.8em; border-left: 6px solid #80cbc4; padding-left: 15px; margin-top: 40px; }
-        h3 { font-size: 1.4em; color: #388e3c; margin-top: 30px; border-bottom: 1px dashed #e0e0e0; padding-bottom: 5px; }
-        p, ul, ol, table { font-size: 1em; color: #455a64; }
-        ul, ol { padding-left: 25px; margin-bottom: 20px; }
-        li { margin-bottom: 10px; }
-        
-        /* 표 스타일 */
-        table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); }
-        th, td { border: none; padding: 15px; text-align: left; }
-        th { background: #00796b; color: #fff; font-weight: 500; text-align: center; }
-        td { background: #ffffff; border-bottom: 1px solid #e0f2f1; }
-        tr:nth-child(even) td { background: #f4fffb; }
-        
-        /* 링크 및 버튼 */
-        a { color: #00796b; text-decoration: none; transition: color 0.3s; }
-        a:hover { color: #004d40; text-decoration: underline; }
-        .btn-cta {
-          display: block;
-          width: 80%;
-          max-width: 400px;
-          margin: 30px auto;
-          padding: 15px 25px;
-          background: #388e3c; /* 다채로운 색감 */
-          color: #fff;
-          font-weight: 700;
-          font-size: 1.1em;
-          border-radius: 50px;
-          box-shadow: 0 6px 15px rgba(56, 142, 60, 0.4);
-          transition: background-color 0.3s, transform 0.2s;
-          text-align: center;
-          cursor: pointer;
-          border: none;
-        }
-        .btn-cta:hover {
-          background: #2e7d32;
-          transform: translateY(-2px);
-        }
-        
-        /* 폼 스타일 */
-        form label { display: block; margin-top: 15px; font-weight: 500; color: #004d40; }
-        form input[type="text"], form input[type="tel"], form select, form textarea, form input[type="date"] {
-            width: calc(100% - 20px);
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #b2dfdb;
-            border-radius: 8px;
-            box-sizing: border-box;
-            font-size: 1em;
-            background: #ffffff;
-            transition: border-color 0.3s;
-        }
-        form input:focus, form select:focus, form textarea:focus { border-color: #00796b; outline: none; box-shadow: 0 0 5px rgba(0, 121, 107, 0.3); }
-        .form-group-inline { display: flex; gap: 20px; }
-        .form-group-inline > div { flex: 1; }
-        
-        /* 네비게이션 */
-        nav ul { list-style: none; padding: 0; text-align: center; display: flex; flex-wrap: wrap; justify-content: center; background: #e0f2f1; border-radius: 10px; padding: 10px; margin-bottom: 30px; }
-        nav li { margin: 5px 15px; }
-        nav a { font-weight: 500; color: #004d40; padding: 8px 12px; display: block; border-radius: 5px; transition: background 0.3s; }
-        nav a:hover { background: #b2dfdb; text-decoration: none; }
-        
-        /* 핵심 정보 하이라이트 */
-        .highlight-box {
-            background: #f1f8e9;
-            border: 2px solid #aed581;
-            padding: 20px;
-            margin: 25px 0;
-            border-radius: 12px;
-        }
-        .anchor { display: block; position: relative; top: -100px; visibility: hidden; } /* 앵커 오프셋 */
-        
-        /* footer */
-        footer { text-align: center; font-size: 0.9em; padding: 20px; background: #c8e6c9; color: #004d40; margin-top: 30px; }
-        
-        /* 반응형 */
-        @media(max-width: 768px) {
-            h1 { font-size: 2.0em; }
-            h2 { font-size: 1.5em; }
-            section { margin: 15px auto; padding: 15px; }
-            nav ul { flex-direction: column; }
-            nav li { margin: 5px 0; }
-            .form-group-inline { flex-direction: column; gap: 0; }
-            .btn-cta { width: 90%; }
-        }
-    </style>
+
+    body { 
+      font-family: 'Pretendard', 'Noto Sans KR', sans-serif; 
+      line-height: 1.8; 
+      margin: 0; 
+      padding: 0; 
+      background-color: var(--bg-light); 
+      color: var(--text-main); 
+    }
+
+    header { 
+      background: linear-gradient(135deg, #4a90e2 0%, #63a4ff 100%); 
+      color: #fff; 
+      padding: 60px 20px; 
+      text-align: center; 
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    header h1 { font-size: 2.5rem; margin-bottom: 15px; font-weight: 800; }
+    header p { font-size: 1.1rem; opacity: 0.9; }
+
+    nav { 
+      position: sticky; 
+      top: 0; 
+      background: rgba(255, 255, 255, 0.95); 
+      backdrop-filter: blur(5px);
+      border-bottom: 1px solid var(--border-color); 
+      z-index: 1000;
+      padding: 10px 0;
+    }
+
+    nav ul { 
+      display: flex; 
+      justify-content: center; 
+      list-style: none; 
+      padding: 0; 
+      margin: 0; 
+      flex-wrap: wrap;
+    }
+
+    nav ul li { margin: 5px 15px; }
+    nav ul li a { color: var(--text-main); font-weight: 600; font-size: 0.95rem; transition: color 0.3s; }
+    nav ul li a:hover { color: var(--primary-color); }
+
+    section { 
+      max-width: 1000px; 
+      margin: 40px auto; 
+      padding: 40px; 
+      background: #fff; 
+      border-radius: 16px; 
+      box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    }
+
+    h2 { 
+      font-size: 1.8rem; 
+      border-left: 6px solid var(--primary-color); 
+      padding-left: 15px; 
+      margin-bottom: 25px; 
+      color: #1a2a3a;
+    }
+
+    h3 { font-size: 1.4rem; color: var(--primary-color); margin-top: 30px; }
+
+    p { margin-bottom: 20px; text-align: justify; }
+
+    table { 
+      width: 100%; 
+      border-collapse: collapse; 
+      margin: 25px 0; 
+      font-size: 0.95rem;
+    }
+
+    th { 
+      background-color: var(--secondary-color); 
+      color: var(--primary-color); 
+      padding: 15px; 
+      border-bottom: 2px solid var(--primary-color);
+    }
+
+    td { 
+      padding: 15px; 
+      border-bottom: 1px solid var(--border-color); 
+      text-align: center;
+    }
+
+    .info-box {
+      background-color: var(--secondary-color);
+      padding: 25px;
+      border-radius: 12px;
+      border-left: 5px solid var(--primary-color);
+      margin: 20px 0;
+    }
+
+    /* 입력 폼 스타일 최적화 (체류시간 증대) */
+    .form-container {
+      background: #f8f9fa;
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+    }
+
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-weight: 700; margin-bottom: 8px; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ced4da;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+
+    .btn-cta {
+      display: block;
+      width: 100%;
+      padding: 18px;
+      background: var(--primary-color);
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn-cta:hover { background: #357abd; }
+
+    .external-links {
+      margin-top: 50px;
+      padding: 20px;
+      background: #f1f3f5;
+      border-radius: 8px;
+    }
+
+    .external-links a {
+      display: inline-block;
+      margin-right: 15px;
+      font-size: 0.85rem;
+      color: var(--text-sub);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #2c3e50;
+      color: #fff;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      section { padding: 20px; margin: 20px 10px; }
+      header h1 { font-size: 1.8rem; }
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <h1>🚗 2026 **누구나운전보험** 완벽 가이드: 임시운전자특약부터 1일 단기 운전자보험료까지</h1>
-        <p>갑작스러운 운전 계획이나 명절 장거리 운전, 차량 공유 시 필요한 **누구나운전보험**(임시 운전자 특약)의 모든 것을 알려드립니다. 최적의 보장, 가장 합리적인 보험료를 지금 바로 비교해보세요.</p>
-        <button class="btn-cta" onclick="location.href='#contact'">✅ 1분 운전자보험 무료 견적 비교 바로가기</button>
-    </header>
 
-    <nav aria-label="페이지 내 이동">
-        <ul>
-            <li><a href="#definition">누구나운전보험 정의</a></li>
-            <li><a href="#types">주요 유형 (단기/임시)</a></li>
-            <li><a href="#2026guide">2026 보장 핵심</a></li>
-            <li><a href="#comparison">상품 비교 테이블</a></li>
-            <li><a href="#faq">자주 묻는 질문 (FAQ)</a></li>
-            <li><a href="#contact">실시간 최저가 견적 문의</a></li>
-        </ul>
-    </nav>
+<header>
+  <h1>누구나 운전 보험 상세 가이드 및 가격 비교</h1>
+  <p>명절, 여행, 대리운전 시 필수적인 운전자 범위 확대 및 단기 보험 상품 정보 제공</p>
+</header>
 
-    <section id="definition">
-        <span id="definition-anchor" class="anchor"></span>
-        <h2>1. **누구나운전보험**이란 무엇이며, 왜 필요한가요?</h2>
-        <div class="highlight-box">
-            <p><strong>핵심 정의:</strong> **누구나운전보험**은 통상적으로 자동차보험의 <strong>운전자 한정 특약</strong>(예: 가족 한정, 부부 한정 등)을 **일시적**으로 풀어 **운전자의 범위를 확대**하는 것을 의미합니다. 흔히 **임시운전자특약** 또는 **단기 운전자보험**의 개념으로 사용됩니다. 이는 예상치 못한 상황에서 타인이 내 차를 운전해야 할 때, 운전자가 미처 보험에 가입하지 않아 발생하는 보험 사고의 보장 공백을 메워줍니다.</p>
-        </div>
+<nav>
+  <ul>
+    <li><a href="#definition">누구나 운전 보험 정의</a></li>
+    <li><a href="#comparison">상품 유형 비교</a></li>
+    <li><a href="#pricing">비용 안내</a></li>
+    <li><a href="#checklist">가입 시 주의사항</a></li>
+    <li><a href="#related">연관 정보</a></li>
+    <li><a href="#calculator">보험료 자가 계산</a></li>
+  </ul>
+</nav>
 
-        <h3>1.1. 누구나운전보험의 필요성 (운전자 한정 특약의 함정)</h3>
-        <p>대부분의 운전자는 보험료 절감을 위해 '운전자 한정 특약'에 가입합니다. 예를 들어 '부부 한정 특약' 가입 차량을 친구가 잠깐 운전하다 사고가 나면, 이는 무보험 운전 사고로 처리되어 대인/대물 배상 외 자기 차량 손해 등은 보장받기 어렵습니다. 특히 명절이나 휴가철 장거리 운전 중 교대가 필요하거나, 지인의 차량을 잠깐 빌려야 할 때 **누구나운전보험**의 필요성이 커집니다.</p>
-        
-        <p>2026년 들어서도 자동차 사고에 대한 법적 책임(벌금, 형사 합의금, 변호사 선임 비용)이 강화되는 추세이므로, **누구나운전보험**을 통해 **임시운전자특약**을 설정하더라도 운전자 본인의 법적 비용을 보장하는 **운전자보험**을 별도로 가입하는 것이 가장 안전합니다. 특히 스쿨존 사고를 포함한 중대 법규 위반 사고 시 운전자에게 부과되는 부담은 막대하므로, **긴급운전자보험** 또는 **초단기운전자보험** 등의 개념을 이해하고 대비해야 합니다.</p>
-    </section>
+<section id="definition">
+  <h2>누구나 운전 보험이란 무엇인가?</h2>
+  <p>
+    일반적인 자동차 보험은 기명 피보험자 1인 혹은 부부, 가족 등으로 운전자의 범위를 한정하여 보험료를 절감합니다. 그러나 추석이나 설날 같은 명절, 혹은 장거리 여행 중 교대 운전이 필요한 경우 타인이 본인의 차량을 운전해야 할 상황이 발생합니다. 이때 활용되는 것이 바로 누구나 운전 보험 서비스입니다. 
+  </p>
+  <p>
+    공식 명칭으로는 임시운전자특약 혹은 단기운전자확대특약이라 불리며, 최근에는 스마트폰 앱을 통해 즉시 가입 가능한 원데이 자동차 보험 형태가 인기를 끌고 있습니다. 이 상품의 핵심은 사고 발생 시 보험 혜택을 운전자의 제한 없이 제공한다는 점에 있습니다.
+  </p>
+  <div class="info-box">
+    <strong>주요 특징 요약</strong>
+    <ul>
+      <li>운전자 범위 제한 해제: 연령 및 관계와 상관없이 사고 보장</li>
+      <li>한시적 보장: 최소 1일부터 최대 30일까지 필요한 기간만 선택 가능</li>
+      <li>대물 및 대인 보상: 기존 보험의 보장 범위를 그대로 유지하면서 운전자만 확대</li>
+    </ul>
+  </div>
+</section>
 
-    <section id="types">
-        <span id="types-anchor" class="anchor"></span>
-        <h2>2. **누구나운전보험**의 주요 유형 및 보장 범위</h2>
-        <p>**누구나운전보험**은 크게 **자동차보험 특약 형태**와 **별도 단기 보험 형태**로 나뉩니다. 목적과 기간에 따라 가장 효율적인 상품을 선택해야 합니다.</p>
 
-        <h3>2.1. 유형 1: 임시운전자특약 (자동차보험 연동)</h3>
-        <p>가장 일반적인 **누구나운전보험** 형태입니다. 기존에 가입된 자동차보험에 특약을 추가하는 방식입니다. 주로 **단기운전자보험**의 역할을 수행하며, 설정 기간 동안 가입 차량을 **누구나** 운전할 수 있게 보장합니다.</p>
-        <ul>
-            <li><strong>주요 특징:</strong> 기존 자동차보험의 보장 범위(대인, 대물, 자손/자차)를 그대로 적용하며, 기간은 보통 1일에서 최대 30일까지 설정 가능합니다.</li>
-            <li><strong>주의 사항:</strong> 특약의 효력은 가입일 **다음날 0시**부터 발생하므로, 당일 운전이 필요할 때는 가입이 불가능합니다. 또한, 특약 해지 후 원래의 운전자 범위로 돌아가는 것을 확인해야 합니다.</li>
-            <li><strong>주요 키워드:</strong> 임시운전자특약, 가족외운전특약, 단기운전확대, 1일 운전 특약</li>
-        </ul>
 
-        <h3>2.2. 유형 2: 별도 단기 운전자보험 (순수 운전자 보장)</h3>
-        <p>자동차보험의 특약이 아닌, **운전자 자신**의 법적 비용(벌금, 변호사 선임비, 교통사고처리지원금)을 **하루 단위**로 보장하는 상품입니다. 주로 **하루운전자보험** 또는 **1일운전보험**으로 불립니다. 다른 사람의 차(렌터카, 법인차, 친구 차)를 운전할 때 그 차의 자동차보험으로는 커버되지 않는 운전자 본인의 형사적/행정적 책임을 대비할 때 유용합니다.</p>
-        <ul>
-            <li><strong>주요 특징:</strong> 피보험자(운전자)를 중심으로 보장하며, 운전하는 차량의 종류나 자동차보험 가입 여부와 무관하게 보장이 가능합니다.</li>
-            <li><strong>주의 사항:</strong> 이 보험은 자동차보험(대인/대물 등)을 대체하지 못합니다. 반드시 운전하는 차량에 기본 자동차보험이 가입되어 있어야 합니다.</li>
-            <li><strong>주요 키워드:</strong> 1일운전자보험, 초단기운전자보험, 렌터카운전자보험, 긴급운전자보험</li>
-        </ul>
-        
-    </section>
+<section id="comparison">
+  <h2>단기 원데이 보험 vs 임시운전자특약 비교</h2>
+  <p>
+    많은 소비자들이 혼동하는 부분 중 하나가 기존 보험사에 신청하는 특약과 앱으로 가입하는 원데이 보험의 차이입니다. 아래 표를 통해 본인에게 맞는 상품을 선택하시기 바랍니다.
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>구분</th>
+        <th>임시운전자특약 (기존 보험)</th>
+        <th>원데이 자동차 보험 (앱 가입)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>효력 발생 시점</td>
+        <td>가입일 다음 날 0시부터</td>
+        <td>가입 즉시 (또는 지정 시점)</td>
+      </tr>
+      <tr>
+        <td>가입 주체</td>
+        <td>차량 소유주 (피보험자)</td>
+        <td>실제 운전자 (타인)</td>
+      </tr>
+      <tr>
+        <td>보험료 수준</td>
+        <td>상대적으로 저렴 (일평균 5천원 내외)</td>
+        <td>편의성 대비 약간 높음 (일평균 1만원 내외)</td>
+      </tr>
+      <tr>
+        <td>사고 시 할증</td>
+        <td>차량 소유주의 보험료 할증 가능성 높음</td>
+        <td>별도 보험으로 소유주 보험료 영향 최소화</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    임시운전자특약은 여행 전날 미리 준비할 수 있을 때 유리하며, 갑작스럽게 운전자가 변경되어 즉각적인 보장이 필요할 때는 원데이 보험이 필수적입니다.
+  </p>
+</section>
+
+<section id="pricing">
+  <h2>누구나 운전 보험 예상 비용 및 가격 산출</h2>
+  <p>
+    보험료는 차량의 가액, 운전자의 연령, 그리고 보장 범위에 따라 상이하게 책정됩니다. 일반적으로 승용차 기준 1일 가입 시 발생하는 비용은 다음과 같습니다.
+  </p>
+  <ul>
+    <li>소형/준중형 세단: 1일 기준 약 4,500원 ~ 7,000원</li>
+    <li>중형/대형 SUV: 1일 기준 약 6,000원 ~ 12,000원</li>
+    <li>외제차 및 고급 대형차: 1일 기준 약 15,000원 이상</li>
+  </ul>
+  <p>
+    특히 누구나 운전 보험은 연령 제한이 낮을수록(만 21세 미만 등) 리스크가 커지기 때문에 보험료가 가파르게 상승하는 경향이 있습니다. 따라서 가입 전 본인의 연령 조건을 반드시 확인해야 합니다.
+  </p>
+</section>
+
+<section id="checklist">
+  <h2>가입 전 필수 체크리스트 및 절차</h2>
+  <p>
+    단순히 가입을 완료했다고 해서 모든 사고가 보장되는 것은 아닙니다. 다음의 5가지 사항을 반드시 점검하십시오.
+  </p>
+  <ol>
+    <li><strong>효력 발생 시간 확인:</strong> 전날 가입이 필요한지 당일 가입이 가능한지 확인합니다.</li>
+    <li><strong>운전 가능 차량 여부:</strong> 법인 차량이나 렌터카의 경우 별도의 특약이 필요할 수 있습니다.</li>
+    <li><strong>사고 접수처 파악:</strong> 가입한 보험사의 고객센터 번호를 미리 메모해 둡니다.</li>
+    <li><strong>대리운전 포함 여부:</strong> 대리운전 기사가 사고를 냈을 때 본인 보험으로 처리가 가능한지 확인합니다.</li>
+    <li><strong>보상 한도 설정:</strong> 대물 보상 한도가 지나치게 낮지는 않은지 점검합니다.</li>
+  </ol>
+</section>
+
+<section id="calculator">
+  <h2>실시간 보험료 계산 및 맞춤형 견적 요청</h2>
+  <p>
+    정확한 보험료 확인을 위해 아래의 세부 정보를 입력해 주시기 바랍니다. 입력하신 정보는 체류 시간 동안 분석되어 최적의 상품을 제안하는 데 활용됩니다.
+  </p>
+  <div class="form-container">
+    <form action="/submit-insurance" method="POST">
+      <div class="form-group">
+        <label for="user-name">성함 (신청인)</label>
+        <input type="text" id="user-name" name="user_name" placeholder="실명을 입력해 주세요" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="user-phone">연락처</label>
+        <input type="tel" id="user-phone" name="user_phone" placeholder="010-0000-0000" required>
+      </div>
+
+      <div class="form-group">
+        <label for="car-type">차종 분류</label>
+        <select id="car-type" name="car_type">
+          <option value="compact">경차/소형차</option>
+          <option value="sedan">중형 세단</option>
+          <option value="suv">SUV/RV</option>
+          <option value="luxury">대형/외제차</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="driver-age">운전자 연령대</label>
+        <select id="driver-age" name="driver_age">
+          <option value="21">만 21세 미만</option>
+          <option value="2126">만 21세 ~ 25세</option>
+          <option value="26plus">만 26세 이상</option>
+          <option value="30plus">만 30세 이상</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="duration">보험 가입 기간</label>
+        <select id="duration" name="duration">
+          <option value="1">1일 (단기)</option>
+          <option value="3">3일 (여행용)</option>
+          <option value="7">7일 (명절/휴가)</option>
+          <option value="30">30일 (장기 대여)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="reason">주요 사용 목적</label>
+        <textarea id="reason" name="reason" rows="3" placeholder="예: 명절 가족 운전, 친구 차량 대여 등 상세 내용을 입력하면 정확한 상담이 가능합니다."></textarea>
+      </div>
+
+      <button type="submit" class="btn-cta">무료 견적 결과 확인하기</button>
+    </form>
+  </div>
+</section>
+
+<section id="related">
+  <h2>함께 많이 찾는 정보 및 관련 키워드</h2>
+  <p>
+    자동차 보험 시장에서 '누구나 운전 보험'과 함께 자주 검색되는 연관 키워드는 다음과 같습니다. 해당 정보를 통해 더 폭넓은 보험 지식을 습득하시기 바랍니다.
+  </p>
+  <div class="info-box">
+    <ul>
+      <li><strong>자동차 보험료 계산기:</strong> 자신의 연간 보험료를 미리 산출해 보는 도구입니다.</li>
+      <li><strong>무보험차 상해 특약:</strong> 가입하지 않은 차량에 의해 사고가 났을 때의 보장 범위입니다.</li>
+      <li><strong>자차 보험 금액:</strong> 본인 차량의 파손을 보상받기 위한 비용 책정 기준입니다.</li>
+      <li><strong>운전자 보험 필수 가입:</strong> 자동차 보험과 별개로 형사적 책임을 보장하는 보험의 중요성입니다.</li>
+      <li><strong>법인 자동차 보험 누구나:</strong> 업무용 차량의 운전자 범위 설정 방법입니다.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="external-links">
+  <strong>신뢰할 수 있는 공식 정보원</strong><br>
+  <a href="https://www.fsc.go.kr" target="_blank" rel="nofollow">금융위원회</a>
+  <a href="https://www.fss.or.kr" target="_blank" rel="nofollow">금융감독원</a>
+  <a href="https://www.knia.or.kr" target="_blank" rel="nofollow">손해보험협회</a>
+  <a href="https://namu.wiki/w/%EC%9E%90%EB%8F%99%EC%B0%A8%EB%B3%B4%ED%97%98" target="_blank" rel="nofollow">나무위키: 자동차보험</a>
+  <a href="https://www.gov.kr" target="_blank" rel="nofollow">정부24 자동차 민원</a>
+</section>
+
+<footer>
+  <p>© 2026 누구나 운전 보험 통합 정보 센터. All Rights Reserved.</p>
+  <p>본 사이트는 보험 상품 비교 정보를 제공하며, 실제 계약 체결 전 반드시 해당 보험사의 약관을 확인하시기 바랍니다.</p>
+  <p>사업자 등록번호: 000-00-00000 | 이메일: info@insurance-guide.kr</p>
+</footer>
+
     
-    <section id="2026guide">
-        <span id="2026guide-anchor" class="anchor"></span>
-        <h2>3. 2026년 최신 **누구나운전보험** 및 운전자보험 개정 가이드</h2>
-        <p>2026년에도 운전자 보험 관련 법규와 상품은 계속 진화하고 있습니다. 특히 교통사고 관련 법규(민식이법, 음주운전 처벌 강화 등)의 영향으로 운전자보험의 중요성은 더욱 커지고 있습니다. **누구나운전보험** 가입 시에도 최신 법규 개정 사항을 반영한 보장 내용인지 확인이 필요합니다.</p>
-
-        <h3>3.1. 2026년 운전자보험 핵심 체크 포인트</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>보장 항목</th>
-                    <th>2026년 주요 개정 트렌드</th>
-                    <th>**누구나운전보험** 적용 여부</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>**교통사고처리지원금** (형사합의금)</td>
-                    <td>최대 한도 상향 (최대 2.5억 원 이상) 및 중상해 사고 보장 확대</td>
-                    <td>**단기 운전자보험** 형태로 가입 시 보장 가능</td>
-                </tr>
-                <tr>
-                    <td>**운전자 벌금** (대인/대물)</td>
-                    <td>대물 벌금 한도 상향 (최대 500만 원), 스쿨존 사고 벌금 보장 강화</td>
-                    <td>**단기 운전자보험** 형태로 가입 시 보장 가능</td>
-                </tr>
-                <tr>
-                    <td>**변호사 선임 비용**</td>
-                    <td>경찰 조사 단계부터 보장받을 수 있는 상품 증가. 선지급 방식 확대.</td>
-                    <td>**단기 운전자보험** 형태로 가입 시 보장 가능</td>
-                </tr>
-                <tr>
-                    <td>**자동차 부상 치료비** (자부상)</td>
-                    <td>급수별 보장 금액 세분화 및 보장 범위 확대 추세</td>
-                    <td>**임시운전자특약**이 아닌 별도 운전자보험에서 보장</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <p><strong>전문가 Tip:</strong> **누구나운전보험**의 주된 역할은 **자동차보험의 공백**을 메우는 것입니다. 그러나 중대 사고 발생 시 운전자의 형사적 책임을 보장하는 것은 **운전자보험**의 영역입니다. 따라서 낯선 차량이나 렌터카를 단기 운전할 때는 해당 차량의 **임시운전자특약** 가입 여부와 별개로, 본인을 위한 **하루운전자보험**을 별도로 가입하는 것이 **벌금, 합의금, 변호사선임비용**을 동시에 대비하는 최적의 방법입니다.</p>
-
-        <h3>3.2. **법인차운전자보험** 및 **렌터카운전자보험** 주의사항</h3>
-        <p>법인 차량이나 장기 렌터카는 보통 운전자 범위가 지정되어 있거나, 사고 시 운전자가 회사 규정 외의 책임을 지게 될 수 있습니다. 법인차의 경우, 임직원 운전자 한정 특약이 대부분이므로, 새로운 직원이 운전해야 할 경우 반드시 **임시운전자특약**을 추가해야 합니다. 렌터카는 기본적으로 종합보험에 가입되어 있지만, 사고 시 발생하는 면책금이나 운전자 본인의 법적 책임은 보장하지 않으므로, **1일 단기운전자보험**을 추가로 고려하는 것이 현명합니다.</p>
-
-        <p><strong>[참고] 신뢰성 있는 외부 자료 확인:</strong></p>
-        <ul>
-            <li><a href="https://www.law.go.kr/" target="_blank" rel="noopener noreferrer">국가법령정보센터</a>: 교통사고처리 특례법 및 도로교통법 최신 개정 내용 확인 (법적 책임 관련)</li>
-            <li><a href="https://www.fss.or.kr/" target="_blank" rel="noopener noreferrer">금융감독원</a>: 보험상품 관련 소비자 유의사항 및 약관 확인 (보험 관련 공신력 확보)</li>
-            <li><a href="https://namu.wiki/w/%EC%9A%B4%EC%A0%84%EC%9E%90%20%EB%B3%B4%ED%97%98" target="_blank" rel="noopener noreferrer">나무위키 - 운전자 보험</a>: 일반적인 운전자 보험의 개념 및 사회적 배경 정보 (정보의 광범위성)</li>
-            <li><a href="https://www.mohw.go.kr/" target="_blank" rel="noopener noreferrer">보건복지부</a>: 교통사고 상해 등급 및 치료 관련 정보 확인</li>
-            <li><a href="https://www.police.go.kr/" target="_blank" rel="noopener noreferrer">경찰청 교통민원24</a>: 교통법규 위반 및 운전 면허 관련 행정 정보 (행정 처분 대비)</li>
-        </ul>
-    </section>
-    
-    <section id="comparison">
-        <span id="comparison-anchor" class="anchor"></span>
-        <h2>4. **누구나운전보험** (단기/임시) 주요 상품 비교 분석</h2>
-        <p>시중에 출시된 **누구나운전보험** 관련 상품은 보험사별로 보장 내용, 보험료, 가입 조건, 보장 개시 시점 등이 상이합니다. 가입자는 자신의 운전 상황(기간, 운전 목적, 차량 소유 여부)에 맞춰 최적의 상품을 선택해야 합니다. 아래는 주요 비교 항목입니다.</p>
-        
-        <h3>4.1. 단기 운전자보험 VS 임시운전자특약 비교</h3>
-        <p>단기 운전자보험(별도 상품)은 운전자 본인의 법적 비용을 보장하는 데 특화되어 있으며, 임시운전자특약(자동차보험 특약)은 차량에 대한 대인/대물/자차 보장의 운전자 범위를 확대하는 것에 중점을 둡니다. 두 가지를 병행할 때 가장 완벽한 보장이 가능합니다.</p>
-        
-        <table>
-            <thead>
-                <tr>
-                    <th>구분</th>
-                    <th>**단기 운전자보험** (예: 하루보험)</th>
-                    <th>**임시운전자특약** (자동차보험 특약)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>**가입 목적**</td>
-                    <td>운전자 본인의 형사적/행정적 책임 보장 (벌금, 합의금 등)</td>
-                    <td>차량의 대인/대물/자차 보장 범위 확대</td>
-                </tr>
-                <tr>
-                    <td>**보장 대상**</td>
-                    <td>피보험자(운전자) 개인</td>
-                    <td>피보험 차량</td>
-                </tr>
-                <tr>
-                    <td>**보장 개시**</td>
-                    <td>가입 후 즉시 또는 지정 시점</td>
-                    <td>가입일 **다음날 0시**부터</td>
-                </tr>
-                <tr>
-                    <td>**보험료 수준**</td>
-                    <td>상대적으로 저렴 (몇천 원 ~ 만 원대/1일)</td>
-                    <td>기존 보험료의 일정 비율 추가</td>
-                </tr>
-                <tr>
-                    <td>**주요 상황**</td>
-                    <td>렌터카 운전, 타인 차량 운전, 법인차 운전</td>
-                    <td>가족/지인이 내 차를 운전할 때</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h3>4.2. 주요 보험사의 운전자보험 관련 키워드 비교 (2026년 기준)</h3>
-        <p>각 보험사는 자사 상품에 다양한 특징을 부여하여 경쟁하고 있습니다. '운전자보험추천', '싼운전자보험', '가성비운전자보험' 등을 검색하는 소비자들은 이러한 세부 보장 내용을 꼼꼼히 확인해야 합니다. 특히 최근에는 '무제한운전자보험'처럼 높은 한도를 제공하거나, '운전습관할인', '안전운전포인트' 연계 할인을 제공하는 스마트한 상품들이 등장하고 있습니다.</p>
-        <ul>
-            <li>**A사:** 초단기운전자보험 특화. 간편 가입, 즉시 보장 시스템 강조. (주요 키워드: 다이렉트운전자보험, 하루운전 즉시 보장)</li>
-            <li>**B사:** 교통사고처리지원금 한도 최고 수준으로 홍보. (주요 키워드: 고액 보장, 비갱신형운전자보험)</li>
-            <li>**C사:** 자부상 등 운전자 본인 상해 보장 영역 강화. (주요 키워드: 운전자보험 혜택, 면허정지위로금)</li>
-        </ul>
-        
-
-        <p><strong>정보성 텍스트 추가: (약 7,000자 분량)</strong></p>
-        <div style="max-height: 400px; overflow-y: scroll; border: 1px solid #e0e0e0; padding: 15px; border-radius: 8px; background: #ffffff;">
-            <p><strong>5. **누구나운전보험** 가입 전 반드시 알아야 할 20가지 상세 정보</strong></p>
-            <h3>5.1. **누구나운전보험**의 범위 이해 (운전자 한정 범위와 임시 확대)</h3>
-            <p>자동차보험 약관에서 '운전자 한정 특약'은 보험료를 낮추는 핵심 요소입니다. '기명 피보험자 1인 한정', '부부 한정', '가족 한정' 등이 대표적입니다. **누구나운전보험**의 핵심인 **임시운전자특약**은 이 한정 범위를 일시적으로 '누구나(All Persons)'로 넓히는 것을 의미합니다. 기간이 만료되면 자동으로 원래의 한정 범위로 돌아갑니다. 특약 가입 시 시작일은 반드시 **가입일 다음날 0시**부터라는 점을 명심해야 합니다. 만약 오늘 당장 타인에게 차를 빌려주어야 한다면, 현재 시점에서는 이미 늦었을 수 있으므로 이 부분을 사전에 확인하는 것이 필수입니다. 임시운전자특약은 대인배상, 대물배상, 자기신체사고(혹은 자동차상해), 자기차량손해(자차) 등 기본 자동차보험의 모든 보장을 확대해줍니다. 다만, 운전자 한정 변경 시 보험료가 상승하며, 이는 단기적인 비용 상승으로 이어집니다.</p>
-
-            <h3>5.2. **단기운전자보험**의 법적 비용 보장 세부 분석</h3>
-            <p>별도로 가입하는 **단기운전자보험**(하루 운전자보험, 1일 운전보험 등)은 자동차보험과는 완전히 다른 목적을 갖습니다. 이는 운전자가 자동차 사고로 인해 형사적 책임(예: 중대 법규 위반 사고)을 져야 할 때 발생하는 **벌금, 형사 합의금(교통사고처리지원금), 변호사 선임 비용**을 보장합니다. 특히 2026년 기준으로도 벌금 한도는 대인 3천만 원, 대물 5백만 원으로 유지되는 추세이지만, 일부 상품은 특정 중대 사고 시 추가적인 보장을 제공합니다. **교통사고처리지원금**은 과거 1억 원에서 최근 2억 원 또는 그 이상으로 상향되는 추세입니다. 이는 사고 시 피해자와의 원만한 합의를 돕기 위한 핵심 보장이며, **누구나운전보험**을 찾을 때 운전자가 가장 신경 써야 할 부분입니다. 특히 타인의 차, 렌터카, 법인차 운전 시에는 차량의 자동차보험만으로는 이 법적 비용을 절대 보장받을 수 없기 때문에 **단기운전자보험**의 가입이 거의 필수적입니다.</p>
-
-            <h3>5.3. 2026년 **민식이법** 관련 운전자보험 보장 강화</h3>
-            <p>'민식이법'(특정범죄 가중처벌 등에 관한 법률 제5조의13) 시행 이후 어린이 보호구역(스쿨존)에서의 안전 운전 의무가 매우 중요해졌습니다. 만약 **누구나운전보험** 기간 중 스쿨존에서 사고가 발생하면, 운전자는 강화된 법적 처벌을 받게 됩니다. 따라서 2026년 상품들은 스쿨존 사고 시 벌금 및 변호사 선임 비용에 대한 보장 한도를 특별히 높이거나 별도 특약을 제공합니다. **운전자보험가입조건**을 확인할 때 '스쿨존 사고 보장 특약'이 포함되어 있는지, 그리고 벌금 한도가 충분한지(대인 벌금 3천만 원 이상)를 반드시 확인해야 합니다. 이는 초보운전자보험, 장롱면허보험 가입자에게도 매우 중요한 점이며, 명절운전보험, 휴가철운전보험으로 단기간 가입하더라도 이 부분을 놓치지 말아야 합니다.</p>
-
-            <h3>5.4. **가족운전자보험**과 **누구나운전보험**의 차이점</h3>
-            <p>'가족운전자보험'은 보통 자동차보험의 '가족 한정 특약'을 의미하며, 운전 가능 범위를 배우자, 직계 존비속 등으로 한정합니다. 반면 **누구나운전보험**은 일시적으로 이 한정을 풀어 운전 범위에 제약을 두지 않는 것입니다. 만약 운전 범위가 항상 가족이라면 '가족 한정 특약'으로도 충분하지만, 친구나 기타 지인이 운전해야 할 상황이 발생하면 반드시 **임시운전자특약**을 통해 **누구나운전보험**으로 전환해야 합니다. 또한, '가족운전자보험'이라는 이름의 별도 운전자보험 상품도 존재하는데, 이는 가족 중 누가 운전하든 운전자의 법적 비용을 보장하는 상품입니다. 이 경우도 운전자 개인의 법적 비용을 보장하는 것이므로, 차량의 대인/대물 책임은 별도의 자동차보험으로 보장됩니다. 복잡한 용어에 속지 않고 '운전자 범위'와 '보장 내용(차량/운전자)'을 구분하는 것이 중요합니다.</p>
-
-            <h3>5.5. **초단기운전자보험**과 **긴급운전자보험**의 편리성</h3>
-            <p>최근에는 모바일 앱 등을 통해 몇 번의 클릭만으로 가입이 가능한 **초단기운전자보험**(1일 단위)이 인기를 끌고 있습니다. 이는 **긴급운전자보험**의 성격이 강하며, 당일 운전이 필요할 때 매우 유용합니다. 특히 **보장 개시 시점**이 가입 후 바로 효력이 발생하는 상품들이 많아(일부 상품은 30분 후 등), 갑작스러운 상황에 대처하기 좋습니다. 명절 장거리 운전 중 피로로 인해 운전대를 넘겨야 할 때, 가입 후 즉시 보장이 시작되는 **긴급운전자보험**을 활용하면 안전을 확보할 수 있습니다. 이러한 상품들은 주로 **다이렉트운전자보험** 형태로 판매되어 보험료도 상대적으로 저렴한 편입니다.</p>
-
-            <h3>5.6. 보험료 절감 팁: **운전자보험료 비교**의 중요성</h3>
-            <p>**누구나운전보험**이든 장기 운전자보험이든, 보험료는 보험사별로 크게 다를 수 있습니다. 보장 내용이 비슷하더라도 상품 구조(갱신형/비갱신형, 순수보장형/만기환급형)에 따라 총 납입액이 달라지기 때문입니다. **비갱신형운전자보험**은 초반 보험료가 비싸지만 총 납입액은 저렴할 수 있고, **갱신형운전자보험**은 저렴한 보험료로 시작하지만 물가 및 위험률에 따라 보험료가 오를 수 있습니다. 여러 보험사의 상품을 비교해주는 **운전자보험비교사이트**나 전문가의 상담을 통해 자신의 상황(나이, 운전경력, 원하는 만기 등)에 맞는 '가성비운전자보험'을 찾는 것이 최선의 절약 방법입니다.</p>
-
-            <h3>5.7. 기타 고려 사항 및 추가 키워드 목록</h3>
-            <p>자율주행 기술의 발전과 함께 '자율주행운전자보험', 차량 공유 서비스의 증가로 '차량공유운전자보험', '카셰어링보험' 등 새로운 유형의 **운전자보험종류**가 등장하고 있습니다. 또한, 무사고 할인, 운전경력인정, 긴급출동서비스 특약 등을 활용하여 보장의 질을 높일 수 있습니다. '운전자보험의무가입'은 아니지만, 중대 사고 발생 시 운전자를 보호하는 '필수운전자보험'으로 인식해야 합니다. **운전자특약**, **운전자배상책임** 등 다양한 용어를 정확히 이해하고, 자신의 운전 환경(자가용운전자보험, 업무용운전자보험, 영업용운전자보험)에 맞는 **최저가운전자보험**을 찾는 노력이 필요합니다.</p>
-            <p><strong>관련 키워드 (총 90개 이상):</strong> 임시운전자특약, 단기운전자보험, 하루운전자보험, 1일운전보험, 운전자보험료 비교, 운전자보험 추천, 2026년 운전자보험, 가족운전자보험, 법인차운전자보험, 렌터카운전자보험, 긴급운전자보험, 운전자보험비교, 자동차보험특약, 필수운전자보험, 운전자보험종류, 운전자보험가입조건, 운전자보험보장내용, 벌금, 합의금, 변호사선임비용, 교통사고처리, 보험상담, 초단기운전자보험, 무제한운전자보험, 다이렉트운전자보험, 싼운전자보험, 가성비운전자보험, 운전경력무관보험, 사고처리비용, 형사합의금, 자동차사고벌금, 자가용운전자보험, 업무용운전자보험, 특약추천, 최저가운전자보험, 인터넷운전자보험, 보험료견적, 운전자보험비교사이트, 하루보험, 당일운전자보험, 부부운전자보험, 운전경력인정, 운전면허보험, 초보운전자보험, 장롱면허보험, 긴급운전, 명절운전보험, 휴가철운전보험, 여행운전자보험, 대리운전보험, 영업용운전자보험, 운전자보험의무가입, 운전자보험필요성, 운전자보험혜택, 갱신형운전자보험, 비갱신형운전자보험, 만기환급형운전자보험, 순수보장형운전자보험, 법규개정운전자보험, 도로교통법, 민식이법, 스쿨존사고, 교통사고전문변호사, 자동차보험운전자한정, 운전자보험가입시기, 운전자보험해지, 운전자보험납입기간, 운전자보험만기, 자동차운전자보험차이, 자동차보험과운전자보험, 면허정지위로금, 면허취소위로금, 무보험차상해, 긴급출동서비스, 무사고할인, 운전습관할인, 자율주행운전자보험, 스마트운전자보험, 운전자보상, 운전자특약, 운전자배상책임, 안전운전포인트, 자동차사고지원금, 차량공유운전자보험, 카셰어링보험, **함께 많이 찾는 키워드**: 운전자보험보장, 운전자보험만기, 운전자보험비교견적, 운전자보험사, 운전자보험설계, 운전자보험특약, 운전자보험할인, 임시운전자보험, 단기보험운전, 1일운전보험추천. (총 92개 키워드) </p>
-        </div>
-        
-    </section>
-
-    <section id="faq">
-        <span id="faq-anchor" class="anchor"></span>
-        <h2>5. **누구나운전보험** 자주 묻는 질문 (FAQ)</h2>
-        
-        <h3>Q1. **임시운전자특약**은 가입 당일 바로 효력이 발생하나요?</h3>
-        <p>A. 아닙니다. 대부분의 **임시운전자특약**(누구나운전보험의 한 형태)은 보험사 규정상 가입일 **다음날 0시**부터 효력이 시작됩니다. 따라서 최소한 하루 전에는 가입을 완료해야 합니다. 만약 당일 급하게 운전이 필요하다면, 가입 후 즉시 효력이 발생하는 **단기 운전자보험**(별도 상품)을 고려해야 합니다.</p>
-        
-        <h3>Q2. 렌터카를 빌렸는데, **누구나운전보험**이 또 필요한가요?</h3>
-        <p>A. 렌터카는 기본적으로 자동차보험(대인/대물/자차)이 가입되어 있지만, 이는 사고 시 **차량과 상대방**에 대한 보장입니다. 운전자가 중대 법규 위반 사고를 일으킬 경우 발생하는 **벌금, 형사 합의금, 변호사 선임 비용**은 운전자 본인의 **단기 운전자보험**이 있어야만 보장받을 수 있습니다. 따라서 **1일운전보험**을 별도로 가입하는 것을 강력히 추천합니다.</p>
-        
-        <h3>Q3. 임시운전자특약 가입 시 보험료는 얼마나 오르나요?</h3>
-        <p>A. 임시운전자특약의 보험료는 기존에 가입된 운전자 한정 범위(예: 부부 한정)를 '누구나'로 일시적으로 확대하는 위험률에 따라 책정됩니다. 일반적으로 1~2만 원대부터 시작하며, 차량 종류, 운전 경력, 기간 등에 따라 상이합니다. 정확한 금액은 가입하신 보험사에 문의하거나 **운전자보험비교사이트**를 통해 확인하는 것이 가장 빠릅니다.</p>
-        
-    </section>
-
-    <section id="contact">
-        <span id="contact-anchor" class="anchor"></span>
-        <h2>6. **누구나운전보험** 최적 견적 실시간 문의</h2>
-        <p>가장 합리적인 **누구나운전보험**과 **단기운전자보험**을 찾을 수 있도록 여러 보험사의 상품을 비교하여 최저가 견적을 제공해 드립니다. 지금 바로 견적 문의를 남겨주시면, 전문 상담사가 맞춤형 상품을 안내해 드립니다.</p>
-
-        <form action="/submit" method="POST" style="max-width:700px; margin:auto; padding: 25px; border: 1px solid #b2dfdb; border-radius: 12px; background: #f9fdf9;">
-            <label for="name">성함<span style="color:#d32f2f;">*</span></label>
-            <input type="text" id="name" name="name" required placeholder="예: 홍길동" />
-
-            <div class="form-group-inline">
-                <div>
-                    <label for="phone">연락처<span style="color:#d32f2f;">*</span></label>
-                    <input type="tel" id="phone" name="phone" required placeholder="010-XXXX-XXXX" pattern="[0-9\-]+" />
-                </div>
-                <div>
-                    <label for="birth-date">생년월일 (2026년 보험료 산정 기준)</label>
-                    <input type="date" id="birth-date" name="birth_date" />
-                </div>
-            </div>
-
-            <label for="move-type">필요한 **누구나운전보험** 유형<span style="color:#d32f2f;">*</span></label>
-            <select id="move-type" name="move_type" required>
-                <option value="">선택하세요</option>
-                <option value="임시특약">임시운전자특약 (내 차 운전자 범위 확대)</option>
-                <option value="단기보험">1일 단기 운전자보험 (운전자 법적 책임 보장)</option>
-                <option value="장기운전자">장기 운전자보험 (비갱신형 등)</option>
-                <option value="법인차">법인차 운전 특약 상담</option>
-                <option value="렌터카">렌터카 운전 보험 상담</option>
-            </select>
-
-            <label for="start-date">보험 효력 시작 희망일<span style="color:#d32f2f;">*</span></label>
-            <input type="date" id="start-date" name="start_date" required />
-
-            <label for="end-date">보험 효력 종료 희망일 (단기 보험의 경우)</label>
-            <input type="date" id="end-date" name="end_date" />
-
-            <label for="car-type">운전할 차량의 종류</label>
-            <select id="car-type" name="car_type">
-                <option value="자가용">개인 자가용</option>
-                <option value="법인">법인/업무용 차량</option>
-                <option value="렌터카">렌터카/카셰어링</option>
-                <option value="타인차">타인 소유 차량</option>
-            </select>
-
-            <label for="message">추가 요청 사항 (예: 고액 벌금 보장 희망, 최저가 상품 위주)</label>
-            <textarea id="message" name="message" rows="4" placeholder="최대한 상세히 작성해주시면 정확한 견적에 도움이 됩니다."></textarea>
-
-            <button type="submit" class="btn-cta">🚀 **누구나운전보험** 무료 견적 요청하기</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>Copyright © 2026 **누구나운전보험** 비교 가이드. 본 사이트는 보험 판매 대리점이 아닌 정보 제공 목적으로 운영됩니다.</p>
-        <p>개인정보 처리 방침 | <a href="#privacy">이용 약관</a></p>
-    </footer>
-</body>
-</html>
